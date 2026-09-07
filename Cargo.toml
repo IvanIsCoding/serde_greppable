@@ -1,0 +1,30 @@
+[package]
+name = "serde_greppable"
+description = "Serialize and deserialize data in the gron format (greppable JSON)"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.94"
+authors = ["Ivan Carvalho <ivancarvalho@gatech.edu>"]
+repository = "https://github.com/IvanIsCoding/serde_greppable"
+license = "MIT OR Apache-2.0"
+keywords = ["gron", "ungron", "json", "grep"]
+categories = ["encoding", "parser-implementations"]
+
+include = [
+    "src/**",
+    "tests/**",
+    "Cargo.toml",
+    "Cargo.lock",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
+]
+
+[dependencies]
+anyhow = "1"
+serde = "1"
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
