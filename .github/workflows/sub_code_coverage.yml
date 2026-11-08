@@ -14,18 +14,18 @@ jobs:
     name: Code Coverage (Ubuntu 24.04 x86-64)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: Install Rust stable
-        uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+        uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
           components: llvm-tools-preview
 
       - name: Install cargo-llvm-cov via binstall
-        uses: taiki-e/install-action@1ed6d7be6168f6c9046541087ff549b6bc581fdf # v2.87.2
+        uses: taiki-e/install-action@v2.87.2
         with:
           tool: cargo-llvm-cov
 
